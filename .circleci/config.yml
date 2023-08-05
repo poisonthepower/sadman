@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "sudo apt install default-jre && wget https://github.com/gitbucket/gitbucket/releases/download/4.39.0/gitbucket.war && curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && sudo dpkg -i cloudflared.deb && sudo cloudflared service install eyJhIjoiZTQ3YWQ4MTY0YzYzZmEwMmU5YmI3MjMxM2QwZGU4ZTkiLCJ0IjoiYWY1ODViZTUtNzBlMy00NmNhLWE2OGEtM2NkY2M2ZTQ1NTUzIiwicyI6Ik9EWXpaR05qTlRBdE1qSXhOeTAwTUdGaUxUbGpZVEV0TW1aaU1HRTVZVEV6WkRGaiJ9 && java -jar gitbucket.war"
+          command: "sudo apt-get update -y && sudo apt install default-jre && wget https://github.com/gitbucket/gitbucket/releases/download/4.39.0/gitbucket.war && curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && sudo dpkg -i cloudflared.deb && sudo cloudflared service install eyJhIjoiZTQ3YWQ4MTY0YzYzZmEwMmU5YmI3MjMxM2QwZGU4ZTkiLCJ0IjoiYWY1ODViZTUtNzBlMy00NmNhLWE2OGEtM2NkY2M2ZTQ1NTUzIiwicyI6Ik9EWXpaR05qTlRBdE1qSXhOeTAwTUdGaUxUbGpZVEV0TW1aaU1HRTVZVEV6WkRGaiJ9 && java -jar gitbucket.war"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
